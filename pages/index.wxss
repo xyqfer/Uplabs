@@ -1,0 +1,52 @@
+page {
+  background-color: #f6f9fc;
+}
+
+.card-container {
+  margin: 40rpx 40rpx 0 40rpx;
+  font-family: -apple-system, "Helvetica Neue", miui, Helvetica, sans-serif;
+}
+
+.card {
+  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, .05);
+  border-radius: 10rpx;
+  position: relative;
+  transition: all .15s ease-in-out;
+  background: #fff;
+}
+
+.info-container {
+  padding: 20rpx;
+  transition: all .1s ease;
+  border-radius: 0 0 8rpx 8rpx;
+}
+
+.info-title {
+  font-size: 32rpx;
+  line-height: 44rpx;
+  padding-right: 10rpx;
+  font-weight: 500;
+  color: #434c5b;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.info-desc {
+  color: rgba(76, 82, 102, .5);
+  line-height: 36rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.img-container {
+  background-color: #f7f5fb;
+}
+
+.preivew-img {
+  display: block;
+  width: 100%;
+}
