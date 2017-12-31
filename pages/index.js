@@ -14,6 +14,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const systemInfo = wx.getSystemInfoSync();
+    this.setData({
+      platform: systemInfo.platform.toLowerCase()
+    });
+
     this.loadData();
   },
 
@@ -24,7 +29,7 @@ Page({
       });
 
       wx.request({
-        url: `https://sy2bnjwp1a.leanapp.cn/api/v1/uplabs/all?offset=${this.data.offset}`,
+        url: `https://sy2bnjwp1a.leanapp.cn/api/v1/uplabs/all?offset=${this.data.offset}&platform=${this.data.platform}`,
         success: (res) => {
           this.setData({
             list: this.data.list.concat(res.data),
