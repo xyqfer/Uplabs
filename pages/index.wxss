@@ -4,10 +4,12 @@ page {
 
 .card-container {
   margin: 40rpx 40rpx 0 40rpx;
+  padding-bottom: 20rpx;
   font-family: -apple-system, "Helvetica Neue", miui, Helvetica, sans-serif;
 }
 
 .card {
+  margin-bottom: 40rpx;
   box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, .05);
   border-radius: 10rpx;
   position: relative;
@@ -43,10 +45,62 @@ page {
 }
 
 .img-container {
-  background-color: #f7f5fb;
+  position: relative;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+.gif-label {
+  position: absolute;
+  left: 20rpx;
+  bottom: 20rpx;
+  border-radius: 4rpx;
+  line-height: 40rpx;
+  padding: 0 16rpx;
+  font-size: 18rpx;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, .3);
 }
 
 .preivew-img {
   display: block;
   width: 100%;
+}
+
+.placeholder-inner {
+  position: relative;
+  background: linear-gradient(90deg, #f6f9fc 8%, #dee3e5 18%, #f6f9fc 33%);
+  background-size: 1800rpx 8rpx;
+  height: 80rpx;
+  animation: placeHolderShimmer 1s linear infinite forwards;
+}
+
+.placeholder-mask {
+  background: #fff;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -936rpx 0;
+  }
+
+  100% {
+    background-position: 936rpx 0;
+  }
+}
+
+.placeholder-mask-header-right {
+  left: 75%;
+  right: 0;
+  height: 40rpx;
+}
+
+.placeholder-mask-header-bottom {
+  top: 40rpx;
+  left: 0;
+  right: 0;
+  height: 10rpx;
 }
