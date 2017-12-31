@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "uplabs-card": "../../component/card/card"
+  },
+  "navigationBarTitleText": "Uplabs"
+}

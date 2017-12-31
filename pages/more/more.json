@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "uplabs-card": "../../component/card/card"
+  }
+}

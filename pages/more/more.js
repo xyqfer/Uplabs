@@ -1,39 +1,50 @@
-// pages/index.js
+// pages/more/more.js
+const getData = require('../utils/getData.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list: [],
-    offset: 0,
-    isLoading: false
+    isLoading: false,
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let offset = options.offset;
+    let title = options.title;
+
+    wx.setNavigationBarTitle({
+      title: title
+    });
+
     const systemInfo = wx.getSystemInfoSync();
     this.setData({
-      platform: systemInfo.platform.toLowerCase()
+      platform: systemInfo.platform.toLowerCase(),
+      offset: offset,
+      page: 1
     });
 
     this.loadData();
   },
 
-  loadData: function() {
+  loadData: function () {
     if (!this.data.isLoading) {
       this.setData({
         isLoading: true
       });
 
-      wx.request({
-        url: `https://sy2bnjwp1a.leanapp.cn/api/v1/uplabs/all?offset=${this.data.offset}&platform=${this.data.platform}`,
-        success: (res) => {
+      getData({
+        url: '/api/v1/uplabs/more',
+        params: `offset=${this.data.offset}&platform=${this.data.platform}&page=${this.data.page}`,
+        success: (data) => {
           this.setData({
-            list: this.data.list.concat(res.data),
-            offset: this.data.offset + 1,
+            list: this.data.list.concat(data),
+            page: this.data.page + 1,
             isLoading: false
           });
         }
@@ -41,28 +52,8 @@ Page({
     }
   },
 
-  showPreview: function(event) {
-    const id = event.currentTarget.dataset.id;
-    const filterList = this.data.list.filter((item) => {
-      return item.id == id;
-    });
-
-    if (filterList.length > 0) {
-      const data = filterList[0];
-      let current = data.preview_url;
-      let urls = [current];
-
-      if (data.images.length > 0) {
-        data.images.forEach((img) => {
-          urls.push(img.urls.full);
-        });
-      }
-
-      wx.previewImage({
-        current: current,
-        urls: urls
-      });
-    }
+  showMore: function() {
+    this.loadData();
   },
 
   /**
@@ -111,9 +102,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    return {
-      title: 'Uplabs',
-      imageUrl: './images/screenshot.png'
-    };
+  
   }
 })

@@ -1,0 +1,34 @@
+<view class='card' wx:if='{{!loading}}'>
+  <view class='img-container' style='background-color: {{backgroundColor}};'>
+    <image class='preivew-img' 
+      src='{{cover}}' 
+      mode='widthFix' 
+      lazy-load='true' 
+      bindtap='showPreview' 
+      data-urls='{{urls}}'>
+    </image>
+    <view wx:if='{{animated}}' class='gif-label'>
+      GIF
+    </view>
+  </view>
+  <view class='info-container'>
+    <view class='info-title'>
+      {{name}}
+    </view>
+    <view class='info-desc'>
+      {{desc}}
+    </view>
+  </view>
+</view>
+
+<view class='card' wx:if='{{loading}}'>
+  <view class='card'>
+    <view class='img-container'></view>
+    <view class='info-container'>
+      <view class='placeholder-inner'>
+        <view class='placeholder-mask placeholder-mask-header-right'></view>
+        <view class='placeholder-mask placeholder-mask-header-bottom'></view>
+      </view>
+    </view>
+  </view>
+</view>

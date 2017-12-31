@@ -1,0 +1,37 @@
+<block wx:for='{{list}}' wx:for-item='listItem' wx:key='offset'>
+  <view class='card-container'>
+
+    <view class='card-header'>
+      <view class='card-header-title'>
+        {{listItem.dateText}}
+      </view>
+      <view class='card-header-date'>
+        {{listItem.date}}
+      </view>
+    </view>
+
+    <block wx:for='{{listItem.list}}' wx:key='id'>
+      <uplabs-card 
+        background-color='{{item.backgroundColor}}' 
+        cover='{{item.cover}}' 
+        animated='{{item.animated}}' 
+        name='{{item.name}}' 
+        desc='{{item.desc}}' 
+        urls='{{item.urls}}'>
+      </uplabs-card>
+    </block>
+
+    <view class='more-btn' 
+      data-offset='{{listItem.offset}}' 
+      data-title='{{listItem.dateText}}' 
+      bindtap='showMore'>
+      Show more about {{listItem.dateText}}
+    </view>
+  </view>
+</block>
+
+<view class='card-container'>
+  <block wx:if='{{isLoading}}' wx:for='{{[1, 2, 3]}}' wx:key='{{index}}'>
+    <uplabs-card loading='{{true}}'></uplabs-card>
+  </block>
+</view>

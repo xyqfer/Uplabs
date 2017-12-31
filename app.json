@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/index"
+    "pages/index/index",
+    "pages/more/more"
   ],
   "window": {
     "backgroundTextStyle": "white",
     "navigationBarBackgroundColor": "#1f428c",
-    "navigationBarTitleText": "Uplabs",
     "backgroundColor": "#f6f9fc",
     "navigationBarTextStyle": "white"
   },
