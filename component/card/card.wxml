@@ -7,8 +7,13 @@
       bindtap='showPreview' 
       data-urls='{{urls}}'>
     </image>
-    <view wx:if='{{animated}}' class='gif-label'>
-      GIF
+    <view class='label-container'>
+      <view class='label count-label'>
+        x{{urls.length}}
+      </view>
+      <view wx:if='{{animated}}' class='label gif-label'>
+        GIF
+      </view>
     </view>
   </view>
   <view class='info-container'>

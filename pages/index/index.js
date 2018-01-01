@@ -22,10 +22,12 @@ Page({
       platform: systemInfo.platform.toLowerCase()
     });
 
-    this.loadData();
+    this.loadData({
+      refresh: false
+    });
   },
 
-  loadData: function() {
+  loadData: function ({ refresh = false }) {
     if (!this.data.isLoading) {
       this.setData({
         isLoading: true
@@ -33,22 +35,39 @@ Page({
 
       getData({
         url: '/api/v1/uplabs/all',
-        params: `offset=${this.data.offset}&platform=${this.data.platform}`,
+        cache: !refresh,
+        params: {
+          offset: refresh ? 0 : this.data.offset,
+          platform: this.data.platform
+        },
         success: (data) => {
           const timeObj = formatTime({
             offset: this.data.offset
           });
 
-          const uplabsData = {
-            list: data,
-            date: `${timeObj.month}-${timeObj.date}`,
-            dateText: timeObj.day,
-            offset: this.data.offset
-          };
+          if (refresh) {
+            this.setData({
+              'list[0].list': data
+            });
+          } else {
+            const uplabsData = {
+              list: data,
+              date: `${timeObj.month}-${timeObj.date}`,
+              dateText: timeObj.day,
+              offset: this.data.offset
+            };
+
+            this.setData({
+              list: this.data.list.concat(uplabsData),
+              offset: this.data.offset + 1
+            });
+          }
+
+          if (refresh) {
+            wx.stopPullDownRefresh();
+          }
 
           this.setData({
-            list: this.data.list.concat(uplabsData),
-            offset: this.data.offset + 1,
             isLoading: false
           });
         }
@@ -97,14 +116,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.loadData({
+      refresh: true
+    });
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.loadData();
+    this.loadData({
+      refresh: false
+    });
   },
 
   /**

@@ -40,17 +40,26 @@
   padding-bottom: 75%;
 }
 
-.gif-label {
+.label-container {
   position: absolute;
   left: 20rpx;
   bottom: 20rpx;
+}
+
+.label {
+  display: inline-block;
+  width: 54rpx;
   border-radius: 4rpx;
   line-height: 40rpx;
-  padding: 0 16rpx;
   font-size: 18rpx;
   font-weight: 700;
   color: #fff;
+  text-align: center;
   background: rgba(0, 0, 0, .3);
+}
+
+.count-label {
+  margin-right: 10rpx;
 }
 
 .preivew-img {

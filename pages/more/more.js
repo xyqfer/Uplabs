@@ -40,7 +40,11 @@ Page({
 
       getData({
         url: '/api/v1/uplabs/more',
-        params: `offset=${this.data.offset}&platform=${this.data.platform}&page=${this.data.page}`,
+        params: {
+          offset: this.data.offset,
+          platform: this.data.platform,
+          page: this.data.page
+        },
         success: (data) => {
           this.setData({
             list: this.data.list.concat(data),
