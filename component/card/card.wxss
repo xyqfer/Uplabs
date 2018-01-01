@@ -38,6 +38,7 @@
   position: relative;
   height: 0;
   padding-bottom: 75%;
+  overflow: hidden;
 }
 
 .label-container {
