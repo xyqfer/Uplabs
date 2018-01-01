@@ -1,22 +1,19 @@
 const formatTime = require('./formatTime.js');
 
-module.exports = ({ url = '', cache = true, params = {}, success = function() {}}) => {
-  const apiHost = 'https://sy2bnjwp1a.leanapp.cn';
+module.exports = ({ cache = true, params = {}, success = function() {}}) => {
+  const apiHost = 'https://uplabs-image-1252013833.file.myqcloud.com';
   const offset = params.offset || 0;
   const page = params.page || 0;
 
   const timeObj = formatTime({ offset });
   const storageKey = `__uplabs_data_${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}__`;
+  const url = `/api/v1/uplabs/uplabs_${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}.json`;
   const cacheData = wx.getStorageSync(storageKey);
 
   if (cacheData && cache) {
     success(cacheData);
   } else {
     let paramsList = [];
-
-    Object.keys(params).forEach((key) => {
-      paramsList.push(`${key}=${params[key]}`);
-    });
 
     if (offset == 0) {
       paramsList.push(`t=${(new Date()).getTime()}`)

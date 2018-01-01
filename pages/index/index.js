@@ -34,7 +34,6 @@ Page({
       });
 
       getData({
-        url: '/api/v1/uplabs/all',
         cache: !refresh,
         params: {
           offset: refresh ? 0 : this.data.offset,

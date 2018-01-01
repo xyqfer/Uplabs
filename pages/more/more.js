@@ -39,7 +39,6 @@ Page({
       });
 
       getData({
-        url: '/api/v1/uplabs/more',
         params: {
           offset: this.data.offset,
           platform: this.data.platform,
@@ -106,6 +105,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: 'Uplabs',
+      imageUrl: './images/screenshot.png'
+    };
   }
 })
