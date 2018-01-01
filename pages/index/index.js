@@ -135,7 +135,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: 'Uplabs',
-      imageUrl: './images/screenshot.png'
+      imageUrl: '../images/screenshot.png'
     };
   }
 })
