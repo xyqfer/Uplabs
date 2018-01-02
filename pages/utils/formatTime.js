@@ -1,8 +1,8 @@
 module.exports = ({offset = 0}) => {
   let timeObj = {};
 
-  //GMT -5
-  const zoneOffset = -5;
+  //GMT -8
+  const zoneOffset = -8;
   const nowDate = new Date();
   const now = nowDate.getTime();
   const offsetMilliSecond = nowDate.getTimezoneOffset() * 60 * 1000;

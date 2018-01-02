@@ -1,7 +1,7 @@
 <view class='card' wx:if='{{!loading}}'>
   <view class='img-container' style='background-color: {{backgroundColor}};'>
     <image class='preivew-img' 
-      src='{{cover}}' 
+      src='{{imageUrl}}' 
       mode='widthFix' 
       lazy-load='true' 
       bindtap='showPreview' 

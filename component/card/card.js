@@ -34,11 +34,24 @@ Component({
     }
   },
 
+  attached: function() {
+    const app = getApp();
+    let imageUrl = this.data.cover;
+
+    if (app.globalData.supportWebp) {
+      imageUrl += '/format/webp';
+    }
+
+    this.setData({
+      imageUrl: imageUrl
+    });
+  },
+
   /**
    * 组件的初始数据
    */
   data: {
-
+    
   },
 
   /**
