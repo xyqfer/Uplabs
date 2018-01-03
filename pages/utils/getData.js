@@ -1,4 +1,5 @@
 const formatTime = require('./formatTime.js');
+const formatData = require('./formatData.js');
 
 module.exports = ({ cache = true, params = {}, success = function() {}}) => {
   const apiHost = 'https://uplabs-image-1252013833.file.myqcloud.com';
@@ -22,8 +23,10 @@ module.exports = ({ cache = true, params = {}, success = function() {}}) => {
     wx.request({
       url: `${apiHost}${url}?${paramsList.join('&')}`,
       success: (res) => {
-        success(res.data);
-        wx.setStorageSync(storageKey, res.data);
+        const uplabsData = formatData(res.data);
+
+        success(uplabsData);
+        wx.setStorageSync(storageKey, uplabsData);
       }
     });
   }
