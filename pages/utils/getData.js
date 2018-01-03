@@ -2,7 +2,7 @@ const formatTime = require('./formatTime.js');
 const formatData = require('./formatData.js');
 
 module.exports = ({ cache = true, params = {}, success = function() {}}) => {
-  const apiHost = 'https://uplabs-image-1252013833.file.myqcloud.com';
+  const apiHost = 'https://uplabs-oss-1252013833.file.myqcloud.com';
   const offset = params.offset || 0;
   const page = params.page || 0;
 
