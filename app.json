@@ -4,10 +4,10 @@
     "pages/more/more"
   ],
   "window": {
-    "backgroundTextStyle": "white",
-    "navigationBarBackgroundColor": "#1f428c",
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#f6f9fc",
     "backgroundColor": "#f6f9fc",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   }
 }
