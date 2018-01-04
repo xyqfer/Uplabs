@@ -23,7 +23,7 @@ Page({
     });
 
     this.loadData({
-      refresh: false
+      refresh: true
     });
   },
 
