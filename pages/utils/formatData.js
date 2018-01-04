@@ -1,5 +1,5 @@
 module.exports = (data) => {
-  if (data.animated_teaser_url != null) {
+  if (data[0] && data[0].animated_teaser_url != null) {
     const assetReg = /^https:\/\/assets\.materialup\.com/g;
     const cdnHost = 'https://uplabscompress-1252013833.image.myqcloud.com';
     
