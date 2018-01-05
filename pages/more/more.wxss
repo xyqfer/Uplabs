@@ -1,1 +1,3 @@
-/* pages/more/more.wxss */
+.card-container {
+  margin-top: 40rpx;
+}

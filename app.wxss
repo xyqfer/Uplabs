@@ -3,7 +3,7 @@ page {
 }
 
 .card-container {
-  margin: 40rpx 40rpx 0 40rpx;
+  margin: 0 40rpx;
   padding-bottom: 20rpx;
   font-family: -apple-system, "Helvetica Neue", miui, Helvetica, sans-serif;
 }
