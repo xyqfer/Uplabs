@@ -1,6 +1,5 @@
 <block wx:for='{{list}}' wx:for-item='listItem' wx:key='offset'>
-  <view class='card-container'>
-
+  <view class='card-container' wx:if='{{listItem && listItem.list && listItem.list.length > 0}}'>
     <view class='card-header'>
       <view class='card-header-date'>
         {{listItem.date}}
