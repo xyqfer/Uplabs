@@ -1,6 +1,6 @@
 .card-header {
   margin-top: 30rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 15rpx;
   padding-bottom: 18rpx;
 }
 
