@@ -38,7 +38,14 @@ Page({
         isLoading: true
       });
 
+      let cache = true;
+
+      if (this.data.offset == 0) {
+        cache = false;
+      }
+
       getData({
+        cache: cache,
         params: {
           offset: this.data.offset,
           platform: this.data.platform,
@@ -53,10 +60,6 @@ Page({
         }
       });
     }
-  },
-
-  showMore: function() {
-    this.loadData();
   },
 
   /**

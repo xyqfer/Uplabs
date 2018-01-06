@@ -23,11 +23,16 @@ Page({
     });
 
     this.loadData({
-      refresh: false
+      refresh: false,
+      success: () => {
+        setTimeout(() => {
+          wx.startPullDownRefresh();
+        }, 300);
+      }
     });
   },
 
-  loadData: function ({ refresh = false }) {
+  loadData: function ({ refresh = false , success = function() {}}) {
     if (!this.data.isLoading) {
       this.setData({
         isLoading: true
@@ -69,6 +74,8 @@ Page({
           this.setData({
             isLoading: false
           });
+
+          success(data);
         }
       });
     }
