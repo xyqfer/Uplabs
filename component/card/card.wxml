@@ -17,11 +17,25 @@
     </view>
   </view>
   <view class='info-container'>
-    <view class='info-title'>
-      {{name}}
+    <view class='avatar' wx:if='{{avatar != null && avatar != ""}}'>
+      <image class='avatar-img' 
+        src='{{avatar}}' 
+        mode='widthFix'>
+      </image>
+      <view class='verified-label'>
+        <image class='verified-img' 
+          src='./images/check_circle.png' 
+          mode='widthFix'>
+        </image>
+      </view>
     </view>
-    <view class='info-desc'>
-      {{desc}}
+    <view class='info-wrap'>
+      <view class='info-title'>
+        {{name}}
+      </view>
+      <view class='info-desc'>
+        {{desc}}
+      </view>
     </view>
   </view>
 </view>

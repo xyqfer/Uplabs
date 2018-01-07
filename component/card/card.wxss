@@ -8,7 +8,9 @@
 }
 
 .info-container {
-  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  padding: 30rpx 20rpx;
   transition: all .1s ease;
   border-radius: 0 0 8rpx 8rpx;
 }
@@ -103,4 +105,40 @@
   left: 0;
   right: 0;
   height: 10rpx;
+}
+
+.info-wrap {
+  overflow: hidden;
+}
+
+.avatar {
+  position: relative;
+  margin: 0 28rpx 0 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.verified-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 32rpx;
+  height: 32rpx;
+  color: #1f428c;
+  background: #fff;
+  margin: 0;
+  border-radius: 50%;
+}
+
+.verified-img {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.avatar-img {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
 }

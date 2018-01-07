@@ -31,6 +31,14 @@ Component({
     loading: {
       type: Boolean,
       value: false
+    },
+    avatar: {
+      type: String,
+      value: ''
+    },
+    verified: {
+      type: Boolean,
+      value: false
     }
   },
 
