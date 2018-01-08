@@ -26,7 +26,10 @@ module.exports = ({ cache = true, params = {}, success = function() {}}) => {
         const uplabsData = formatData(res.data);
 
         success(uplabsData);
-        wx.setStorageSync(storageKey, uplabsData);
+
+        if (uplabsData && uplabsData.length > 0) {
+          wx.setStorageSync(storageKey, uplabsData);
+        }
       }
     });
   }
