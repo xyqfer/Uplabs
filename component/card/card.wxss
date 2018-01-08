@@ -15,6 +15,10 @@
   border-radius: 0 0 8rpx 8rpx;
 }
 
+.loading-info {
+  display: block;
+}
+
 .info-title {
   font-size: 32rpx;
   line-height: 44rpx;
@@ -94,6 +98,16 @@
   }
 }
 
+.placeholder-mask-avatar {
+  border: 20rpx solid #fff;
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 50%;
+  top: -20rpx;
+  left: -20rpx;
+  background: rgba(0, 0, 0, 0);
+}
+
 .placeholder-mask-header-right {
   left: 75%;
   right: 0;
@@ -102,9 +116,23 @@
 
 .placeholder-mask-header-bottom {
   top: 40rpx;
-  left: 0;
+  left: 80rpx;
   right: 0;
   height: 10rpx;
+}
+
+.placeholder-mask-header-left {
+  top: 0;
+  left: 80rpx;
+  height: 40rpx;
+  width: 20rpx;
+}
+
+.placeholder-mask-subheader-left {
+  top: 48rpx;
+  height: 40rpx;
+  left: 80rpx;
+  width: 20rpx;
 }
 
 .info-wrap {

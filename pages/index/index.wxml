@@ -16,6 +16,8 @@
         animated='{{item.animated}}' 
         name='{{item.name}}' 
         desc='{{item.desc}}' 
+        avatar='{{item.avatar}}'
+        verified='{{!!item.verified}}'
         urls='{{item.urls}}'>
       </uplabs-card>
     </block>

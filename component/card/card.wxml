@@ -22,7 +22,7 @@
         src='{{avatar}}' 
         mode='widthFix'>
       </image>
-      <view class='verified-label'>
+      <view class='verified-label' wx:if='{{!!verified}}'>
         <image class='verified-img' 
           src='./images/check_circle.png' 
           mode='widthFix'>
@@ -41,13 +41,14 @@
 </view>
 
 <view class='card' wx:if='{{loading}}'>
-  <view class='card'>
-    <view class='img-container'></view>
-    <view class='info-container'>
-      <view class='placeholder-inner'>
-        <view class='placeholder-mask placeholder-mask-header-right'></view>
-        <view class='placeholder-mask placeholder-mask-header-bottom'></view>
-      </view>
+  <view class='img-container'></view>
+  <view class='info-container loading-info'>
+    <view class='placeholder-inner'>
+      <view class='placeholder-mask placeholder-mask-avatar'></view>
+      <view class='placeholder-mask placeholder-mask-header-left'></view>
+      <view class='placeholder-mask placeholder-mask-subheader-left'></view>
+      <view class='placeholder-mask placeholder-mask-header-right'></view>
+      <view class='placeholder-mask placeholder-mask-header-bottom'></view>
     </view>
   </view>
 </view>

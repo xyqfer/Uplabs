@@ -50,6 +50,12 @@ Component({
       imageUrl += '/format/webp';
     }
 
+    if (this.data.avatar.indexOf('uplabscompress-1252013833.image.myqcloud.com') == -1) {
+      this.setData({
+        avatar: ''
+      });
+    }
+
     this.setData({
       imageUrl: imageUrl
     });
