@@ -3,6 +3,26 @@
     "pages/index/index",
     "pages/more/more"
   ],
+  "tabBar": {
+    "selectedColor": "#000000",
+    "color": "#BAB8B8",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "All",
+        "iconPath": "./pages/images/index_default.png",
+        "selectedIconPath": "./pages/images/index_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "iOS",
+        "iconPath": "./pages/images/ios_default.png",
+        "selectedIconPath": "./pages/images/ios_select.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#f6f9fc",
