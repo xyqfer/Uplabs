@@ -13,10 +13,51 @@ page {
 }
 
 .card-header-title {
+  position: relative;
+  display: inline-block;
   font-size: 68rpx;
   color: rgba(0, 0, 0, .87);
   font-weight: 700;
   line-height: 82rpx;
+  text-transform: uppercase;
+}
+
+.card-header-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 10%; 
+  z-index: -1;
+}
+
+.card-header-title-0::after {
+  background: #ffccc7;
+}
+
+.card-header-title-1::after {
+  background: #ffffb8;
+}
+
+.card-header-title-2::after {
+  background: #ffd6e7;
+}
+
+.card-header-title-3::after {
+  background: #d9f7be;
+}
+
+.card-header-title-4::after {
+  background: #ffe7ba;
+}
+
+.card-header-title-5::after {
+  background: #bae7ff;
+}
+
+.card-header-title-6::after {
+  background: #efdbff;
 }
 
 .card-header-date {

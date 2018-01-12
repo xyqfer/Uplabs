@@ -59,6 +59,7 @@ Page({
               list: data,
               date: `${timeObj.month}-${timeObj.date}`,
               dateText: timeObj.day,
+              dayIndex: timeObj.dayIndex,
               offset: this.data.offset
             };
 

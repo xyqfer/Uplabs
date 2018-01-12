@@ -18,6 +18,7 @@ module.exports = ({offset = 0}) => {
   const year = time.getFullYear();
 
   let day = '';
+  const dayIndex = time.getDay();
 
   if (offset == 0) {
     day = 'Today';
@@ -27,5 +28,5 @@ module.exports = ({offset = 0}) => {
     day = dayList[time.getDay()];
   }
 
-  return { year, month, date, day };
+  return { year, month, date, day, dayIndex };
 };

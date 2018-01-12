@@ -4,7 +4,7 @@
       <view class='card-header-date'>
         {{listItem.date}}
       </view>
-      <view class='card-header-title'>
+      <view class='card-header-title card-header-title-{{listItem.dayIndex}}'>
         {{listItem.dateText}}
       </view>
     </view>
