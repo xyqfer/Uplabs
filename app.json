@@ -9,7 +9,7 @@
     "selectedColor": "#000000",
     "color": "#BAB8B8",
     "backgroundColor": "#fafafa",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -33,8 +33,8 @@
   },
   "window": {
     "backgroundTextStyle": "black",
-    "navigationBarBackgroundColor": "#f6f9fc",
-    "backgroundColor": "#f6f9fc",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   }

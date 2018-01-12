@@ -1,16 +1,14 @@
 page {
-  background-color: #f6f9fc;
+  background-color: #ffffff;
 }
 
 .card-container {
-  margin: 0 40rpx;
   padding-bottom: 20rpx;
   font-family: -apple-system, "Helvetica Neue", miui, Helvetica, sans-serif;
 }
 
 .card-header {
-  margin-top: 30rpx;
-  margin-bottom: 15rpx;
+  margin: 30rpx 40rpx 15rpx 40rpx;
   padding-bottom: 18rpx;
 }
 

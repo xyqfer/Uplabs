@@ -1,6 +1,5 @@
 .card {
-  margin-bottom: 40rpx;
-  box-shadow: 0 4rpx 20rpx 0 rgba(0, 0, 0, .05);
+  margin-bottom: 50rpx;
   border-radius: 10rpx;
   position: relative;
   transition: all .15s ease-in-out;
@@ -10,9 +9,9 @@
 .info-container {
   display: flex;
   align-items: center;
-  padding: 30rpx 20rpx;
+  padding: 28rpx;
   transition: all .1s ease;
-  border-radius: 0 0 8rpx 8rpx;
+  border-bottom: 1rpx solid #DBDBDB;
 }
 
 .loading-info {
