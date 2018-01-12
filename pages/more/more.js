@@ -17,6 +17,7 @@ Page({
   onLoad: function (options) {
     let offset = options.offset;
     let title = options.title;
+    let type = options.type;
 
     wx.setNavigationBarTitle({
       title: title
@@ -26,7 +27,8 @@ Page({
     this.setData({
       platform: systemInfo.platform.toLowerCase(),
       offset: offset,
-      page: 1
+      page: 1,
+      type: type
     });
 
     this.loadData();
@@ -49,7 +51,8 @@ Page({
         params: {
           offset: this.data.offset,
           platform: this.data.platform,
-          page: this.data.page
+          page: this.data.page,
+          type: this.data.type
         },
         success: (data) => {
           this.setData({

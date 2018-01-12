@@ -41,6 +41,7 @@ Page({
       getData({
         cache: !refresh,
         params: {
+          type: 'all',
           offset: refresh ? 0 : this.data.offset,
           platform: this.data.platform
         },
@@ -86,7 +87,7 @@ Page({
     const title = event.currentTarget.dataset.title;
 
     wx.navigateTo({
-      url: `../more/more?offset=${offset}&title=${title}`
+      url: `../more/more?offset=${offset}&title=${title}&type=all`
     });
   },
 

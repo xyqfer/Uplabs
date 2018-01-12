@@ -5,10 +5,11 @@ module.exports = ({ cache = true, params = {}, success = function() {}}) => {
   const apiHost = 'https://uplabs-oss-1252013833.file.myqcloud.com';
   const offset = params.offset || 0;
   const page = params.page || 0;
+  const pageType = params.type || 'all';
 
   const timeObj = formatTime({ offset });
-  const storageKey = `__uplabs_data_${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}__`;
-  const url = `/api/v1/uplabs/uplabs_${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}.json`;
+  const storageKey = `__uplabs_data_${pageType == 'all' ? '' : (pageType + '_')}${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}__`;
+  const url = `/api/v1/uplabs/uplabs_${pageType == 'all' ? '' : (pageType + '_')}${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}.json`;
   const cacheData = wx.getStorageSync(storageKey);
 
   if (cacheData && cache) {

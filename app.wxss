@@ -7,3 +7,35 @@ page {
   padding-bottom: 20rpx;
   font-family: -apple-system, "Helvetica Neue", miui, Helvetica, sans-serif;
 }
+
+.card-header {
+  margin-top: 30rpx;
+  margin-bottom: 15rpx;
+  padding-bottom: 18rpx;
+}
+
+.card-header-title {
+  font-size: 68rpx;
+  color: rgba(0, 0, 0, .87);
+  font-weight: 700;
+  line-height: 82rpx;
+}
+
+.card-header-date {
+  color: rgba(76, 87, 102, .5);
+  font-size: 26rpx;
+  font-weight: 400;
+  margin-bottom: 12rpx;
+}
+
+.more-btn {
+  margin-bottom: 60rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #4c5766;
+  font-weight: 500;
+  line-height: 96rpx;
+  border: 2rpx solid rgba(0, 0, 0, .05);
+  border-radius: 8rpx;
+  text-align: center;
+}

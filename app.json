@@ -3,38 +3,31 @@
     "pages/index/index",
     "pages/more/more",
     "pages/ios/ios",
-    "pages/android/android",
-    "pages/collection/collection"
+    "pages/android/android"
   ],
   "tabBar": {
     "selectedColor": "#000000",
-    "color": "#000000",
+    "color": "#BAB8B8",
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "",
+        "text": "All",
         "iconPath": "./pages/images/index_default.png",
         "selectedIconPath": "./pages/images/index_select.png"
       },
       {
         "pagePath": "pages/ios/ios",
-        "text": "",
+        "text": "iOS",
         "iconPath": "./pages/images/ios_default.png",
         "selectedIconPath": "./pages/images/ios_select.png"
       },
       {
         "pagePath": "pages/android/android",
-        "text": "",
-        "iconPath": "./pages/images/ios_default.png",
-        "selectedIconPath": "./pages/images/ios_select.png"
-      },
-      {
-        "pagePath": "pages/collection/collection",
-        "text": "",
-        "iconPath": "./pages/images/ios_default.png",
-        "selectedIconPath": "./pages/images/ios_select.png"
+        "text": "Android",
+        "iconPath": "./pages/images/android_default.png",
+        "selectedIconPath": "./pages/images/android_select.png"
       }
     ]
   },
