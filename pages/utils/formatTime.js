@@ -10,7 +10,7 @@ module.exports = ({offset = 0}) => {
 
   const timestamp = (currentZoneDate).getTime() - offset * 24 * 60 * 60 * 1000;
   const time = new Date(timestamp);
-  let dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  let dayList = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
   let month = time.getMonth() + 1;
   month = month < 10 ? '0' + month : month;
 
@@ -21,9 +21,9 @@ module.exports = ({offset = 0}) => {
   const dayIndex = time.getDay();
 
   if (offset == 0) {
-    day = 'Today';
+    day = 'TODAY';
   } else if (offset == 1) {
-    day = 'Yesterday';
+    day = 'YESTERDAY';
   } else {
     day = dayList[time.getDay()];
   }

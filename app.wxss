@@ -19,7 +19,6 @@ page {
   color: rgba(0, 0, 0, .87);
   font-weight: 700;
   line-height: 82rpx;
-  text-transform: uppercase;
 }
 
 .card-header-title::after {
