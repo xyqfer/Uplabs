@@ -140,7 +140,7 @@
 
 .avatar {
   position: relative;
-  margin: 0 28rpx 0 10rpx;
+  margin-right: 28rpx;
   width: 80rpx;
   height: 80rpx;
 }
