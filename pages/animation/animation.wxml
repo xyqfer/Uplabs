@@ -1,0 +1,24 @@
+<view class='card-container'>
+  <view class='card-header'>
+      <view class='card-header-title card-header-title-{{dayIndex}}'>
+        ANIMATION
+      </view>
+    </view>
+
+  <block wx:for='{{list}}' wx:key='id'>
+    <uplabs-card 
+      background-color='{{item.backgroundColor}}' 
+      cover='{{item.cover}}' 
+      animated='{{item.animated}}' 
+      name='{{item.name}}' 
+      desc='{{item.desc}}' 
+      avatar='{{item.avatar}}'
+      verified='{{!!item.verified}}'
+      urls='{{item.urls}}'>
+    </uplabs-card>
+  </block>
+
+  <block wx:if='{{isLoading}}' wx:for='{{[1, 2, 3]}}' wx:key='{{index}}'>
+    <uplabs-card loading='{{true}}'></uplabs-card>
+  </block>
+</view>

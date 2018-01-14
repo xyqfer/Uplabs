@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/more/more",
     "pages/ios/ios",
-    "pages/android/android"
+    "pages/android/android",
+    "pages/animation/animation"
   ],
   "tabBar": {
     "selectedColor": "#000000",
@@ -28,6 +29,12 @@
         "text": "Android",
         "iconPath": "./pages/images/android_default.png",
         "selectedIconPath": "./pages/images/android_select.png"
+      },
+      {
+        "pagePath": "pages/animation/animation",
+        "text": "Animation",
+        "iconPath": "./pages/images/animation_default.png",
+        "selectedIconPath": "./pages/images/animation_select.png"
       }
     ]
   },

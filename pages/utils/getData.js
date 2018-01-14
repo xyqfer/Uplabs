@@ -8,8 +8,19 @@ module.exports = ({ cache = true, params = {}, success = function() {}}) => {
   const pageType = params.type || 'all';
 
   const timeObj = formatTime({ offset });
-  const storageKey = `__uplabs_data_${pageType == 'all' ? '' : (pageType + '_')}${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}__`;
-  const url = `/api/v1/uplabs/uplabs_${pageType == 'all' ? '' : (pageType + '_')}${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}.json`;
+
+  const storagePrefix = `uplabs_data_${pageType == 'all' ? '' : (pageType + '_')}`;
+  const storageBody = pageType == 'animation' ? `${page}` :
+    `${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}`;
+    
+  const storageKey = `__${storagePrefix}${storageBody}__`;
+
+  const apiPath = '/api/v1/uplabs/uplabs_';
+  const apiPrefix = `${pageType == 'all' ? '' : (pageType + '_')}`;
+  const apiBody = pageType == 'animation' ? page :
+    `${timeObj.year}-${timeObj.month}-${timeObj.date}_${page}`;
+  const url = `${apiPath}${apiPrefix}${apiBody}.json`;
+
   const cacheData = wx.getStorageSync(storageKey);
 
   if (cacheData && cache) {
