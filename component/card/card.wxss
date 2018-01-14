@@ -48,8 +48,8 @@
 
 .label-container {
   position: absolute;
-  left: 20rpx;
-  bottom: 20rpx;
+  right: 20rpx;
+  top: 20rpx;
 }
 
 .label {
