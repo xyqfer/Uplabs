@@ -144,6 +144,7 @@ Page({
   onShareAppMessage: function () {
     return {
       title: 'Uplabs',
+      path: 'pages/android/android',
       imageUrl: '../images/screenshot.png'
     };
   }

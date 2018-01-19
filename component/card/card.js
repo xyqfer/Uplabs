@@ -8,6 +8,10 @@ Component({
       type: String,
       value: '#fff'
     },
+    postId: {
+      type: Number,
+      value: 0
+    },
     cover: {
       type: String,
       value: ''
@@ -81,6 +85,14 @@ Component({
           urls: urls
         });
       }
+    },
+
+    showPost: function(event) {
+      const id = event.currentTarget.dataset.postId;
+
+      wx.navigateTo({
+        url: `../post/post?id=${id}`
+      });
     }
   }
 })

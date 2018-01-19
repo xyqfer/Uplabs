@@ -1,4 +1,21 @@
-<view class='card' wx:if='{{!loading}}'>
+<view class='card' 
+  wx:if='{{!loading}}' 
+  bindtap='showPost' data-post-id='{{postId}}'>
+  <view class='img-container' style='background-color: {{backgroundColor}};'>
+    <image class='preivew-img' 
+      src='{{imageUrl}}' 
+      mode='widthFix' 
+      lazy-load='true'>
+    </image>
+    <view class='label-container'>
+      <view class='label count-label'>
+        x{{urls.length}}
+      </view>
+      <view wx:if='{{animated}}' class='label gif-label'>
+        GIF
+      </view>
+    </view>
+  </view>
   <view class='info-container'>
     <view class='avatar' wx:if='{{avatar != null && avatar != ""}}'>
       <image class='avatar-img' 
@@ -18,23 +35,6 @@
       </view>
       <view class='info-desc'>
         {{desc}}
-      </view>
-    </view>
-  </view>
-  <view class='img-container' style='background-color: {{backgroundColor}};'>
-    <image class='preivew-img' 
-      src='{{imageUrl}}' 
-      mode='widthFix' 
-      lazy-load='true' 
-      bindtap='showPreview' 
-      data-urls='{{urls}}'>
-    </image>
-    <view class='label-container'>
-      <view class='label count-label'>
-        x{{urls.length}}
-      </view>
-      <view wx:if='{{animated}}' class='label gif-label'>
-        GIF
       </view>
     </view>
   </view>

@@ -4,7 +4,8 @@
     "pages/more/more",
     "pages/ios/ios",
     "pages/android/android",
-    "pages/animation/animation"
+    "pages/animation/animation",
+    "pages/post/post"
   ],
   "tabBar": {
     "selectedColor": "#000000",

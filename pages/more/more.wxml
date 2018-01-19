@@ -1,6 +1,7 @@
 <view class='card-container'>
   <block wx:for='{{list}}' wx:key='id'>
     <uplabs-card 
+      post-id='{{item.id}}' 
       background-color='{{item.backgroundColor}}' 
       cover='{{item.cover}}' 
       animated='{{item.animated}}' 

@@ -9,6 +9,7 @@ module.exports = (data) => {
         id: item.id,
         animated: item.animated,
         name: item.name,
+        detail: item.description_without_html
       };
 
       card.desc = `by ${item.maker_name} in ${item.subcategory_friendly_name_plural}`;

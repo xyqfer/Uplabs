@@ -1,0 +1,13 @@
+<view class='info-container'>
+  <view class='name'>{{postData.name}}</view>
+</view>
+
+<view class='img-container'>
+  <block wx:for='{{postData.urls}}'>
+    <image class='img' 
+      src='{{item}}' 
+      mode='widthFix' 
+      lazy-load='true'>
+    </image>
+  </block>
+</view>
