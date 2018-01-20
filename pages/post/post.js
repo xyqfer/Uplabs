@@ -15,7 +15,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let id = options.id;
+    const id = options.id;
+    const from = options.from;
+
+    if (from == 'share') {
+      
+    }
+
     this.loadData(id);
   },
 
@@ -82,6 +88,24 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    const postData = this.data.postData;
+
+    return {
+      title: `Uplabs - ${postData.name}`,
+      path: `pages/post/post?id=${postData.id}&from=share`,
+      imageUrl: postData.urls[0]
+    };
+  },
+
+  showPreview: function (event) {
+    const urls = this.data.postData.urls;
+    const index = +event.currentTarget.dataset.index;
+
+    if (urls.length > 0) {
+      wx.previewImage({
+        current: urls[index],
+        urls: urls
+      });
+    }
   }
 })

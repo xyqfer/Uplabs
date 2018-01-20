@@ -143,9 +143,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Uplabs',
-      path: 'pages/android/android',
-      imageUrl: '../images/screenshot.png'
+      title: 'Uplabs - Android',
+      path: 'pages/android/android'
     };
   }
 })

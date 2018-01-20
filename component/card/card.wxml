@@ -7,14 +7,6 @@
       mode='widthFix' 
       lazy-load='true'>
     </image>
-    <view class='label-container'>
-      <view class='label count-label'>
-        x{{urls.length}}
-      </view>
-      <view wx:if='{{animated}}' class='label gif-label'>
-        GIF
-      </view>
-    </view>
   </view>
   <view class='info-container'>
     <view class='avatar' wx:if='{{avatar != null && avatar != ""}}'>

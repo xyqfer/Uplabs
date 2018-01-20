@@ -112,8 +112,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Uplabs',
-      imageUrl: '../images/screenshot.png'
+      title: 'Uplabs'
     };
   }
 })

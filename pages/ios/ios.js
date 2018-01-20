@@ -143,9 +143,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Uplabs',
-      path: 'pages/ios/ios',
-      imageUrl: '../images/screenshot.png'
+      title: 'Uplabs - iOS',
+      path: 'pages/ios/ios'
     };
   }
 })

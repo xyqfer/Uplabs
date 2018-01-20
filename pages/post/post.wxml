@@ -2,9 +2,11 @@
   <view class='name'>{{postData.name}}</view>
 </view>
 
-<view class='img-container'>
+<view class='img-container' style='background-color: {{postData.backgroundColor}}'>
   <block wx:for='{{postData.urls}}'>
     <image class='img' 
+      bindtap='showPreview'
+      data-index='{{index}}'
       src='{{item}}' 
       mode='widthFix' 
       lazy-load='true'>

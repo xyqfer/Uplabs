@@ -108,9 +108,8 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: 'Uplabs',
-      path: 'pages/animation/animation',
-      imageUrl: '../images/screenshot.png'
+      title: 'Uplabs - Animation',
+      path: 'pages/animation/animation'
     };
   }
 })
