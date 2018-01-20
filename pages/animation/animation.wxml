@@ -6,17 +6,7 @@
     </view>
 
   <block wx:for='{{list}}' wx:key='id'>
-    <uplabs-card 
-      post-id='{{item.id}}' 
-      background-color='{{item.backgroundColor}}' 
-      cover='{{item.cover}}' 
-      animated='{{item.animated}}' 
-      name='{{item.name}}' 
-      desc='{{item.desc}}' 
-      avatar='{{item.avatar}}'
-      verified='{{!!item.verified}}'
-      urls='{{item.urls}}'>
-    </uplabs-card>
+    <uplabs-card card-data='{{item}}'></uplabs-card>
   </block>
 
   <block wx:if='{{isLoading}}' wx:for='{{[1, 2, 3]}}' wx:key='{{index}}'>

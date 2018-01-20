@@ -11,6 +11,7 @@
   align-items: center;
   padding: 28rpx;
   transition: all .1s ease;
+  border-top: 1rpx solid #DBDBDB;
 }
 
 .loading-info {

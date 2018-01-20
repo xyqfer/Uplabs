@@ -19,10 +19,14 @@ Page({
     const from = options.from;
 
     if (from == 'share') {
-      
-    }
+      this.loadData(id);
+    } else {
+      const app = getApp();
 
-    this.loadData(id);
+      this.setData({
+        postData: app.globalData.postData
+      });
+    }
   },
 
   loadData: function (id) {

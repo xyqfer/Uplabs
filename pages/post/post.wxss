@@ -1,3 +1,43 @@
+.info-container {
+  padding: 40rpx 35rpx 34rpx 40rpx;
+  border-bottom: 1rpx solid #D5D6D7;
+}
+
+.post-name {
+  font-size: 40rpx;
+  color: #464646;
+}
+
+.post-category {
+  margin-top: 18rpx;
+  font-size: 25rpx;
+  color: #878687;
+}
+
+.post-marker {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.post-avatar {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 25rpx;
+}
+
+.post-avatar-img {
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.post-marker-name {
+  font-size: 30rpx;
+  color: #464646;
+}
+
 .img-container {
 
 }

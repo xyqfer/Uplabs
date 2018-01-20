@@ -7,6 +7,7 @@ App({
     }
   },
   globalData: {
-    supportWebp: false
+    supportWebp: false,
+    postData: {}
   }
 })

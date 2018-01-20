@@ -1,7 +1,7 @@
 <view class='card' 
   wx:if='{{!loading}}' 
-  bindtap='showPost' data-post-id='{{postId}}'>
-  <view class='img-container' style='background-color: {{backgroundColor}};'>
+  bindtap='openPost' data-post-id='{{postId}}'>
+  <view class='img-container' style='background-color: {{cardData.backgroundColor}};'>
     <image class='preivew-img' 
       src='{{imageUrl}}' 
       mode='widthFix' 
@@ -9,12 +9,12 @@
     </image>
   </view>
   <view class='info-container'>
-    <view class='avatar' wx:if='{{avatar != null && avatar != ""}}'>
+    <view class='avatar' wx:if='{{cardData.avatar != null && cardData.avatar != ""}}'>
       <image class='avatar-img' 
-        src='{{avatar}}' 
+        src='{{cardData.avatar}}' 
         mode='widthFix'>
       </image>
-      <view class='verified-label' wx:if='{{!!verified}}'>
+      <view class='verified-label' wx:if='{{!!cardData.verified}}'>
         <image class='verified-img' 
           src='./images/check_circle.png' 
           mode='widthFix'>
@@ -23,10 +23,10 @@
     </view>
     <view class='info-wrap'>
       <view class='info-title'>
-        {{name}}
+        {{cardData.name}}
       </view>
       <view class='info-desc'>
-        {{desc}}
+        {{cardData.desc}}
       </view>
     </view>
   </view>
