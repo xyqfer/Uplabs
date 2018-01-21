@@ -1,5 +1,6 @@
 .info-container {
-  padding: 40rpx 35rpx 34rpx 40rpx;
+  font-weight: 500;
+  padding: 30rpx 35rpx 34rpx 40rpx;
   border-bottom: 1rpx solid #D5D6D7;
 }
 
@@ -21,15 +22,15 @@
 }
 
 .post-avatar {
-  width: 90rpx;
-  height: 90rpx;
+  width: 80rpx;
+  height: 80rpx;
   margin-right: 25rpx;
 }
 
 .post-avatar-img {
   display: block;
-  width: 90rpx;
-  height: 90rpx;
+  width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
 }
 

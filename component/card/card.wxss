@@ -1,6 +1,4 @@
 .card {
-  margin-bottom: 55rpx;
-  border-radius: 10rpx;
   position: relative;
   transition: all .15s ease-in-out;
   background: #fff;
@@ -62,10 +60,6 @@
   color: #fff;
   text-align: center;
   background: rgba(0, 0, 0, .3);
-}
-
-.count-label {
-  margin-right: 10rpx;
 }
 
 .preivew-img {

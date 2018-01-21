@@ -7,26 +7,9 @@
       mode='widthFix' 
       lazy-load='true'>
     </image>
-  </view>
-  <view class='info-container'>
-    <view class='avatar' wx:if='{{cardData.avatar != null && cardData.avatar != ""}}'>
-      <image class='avatar-img' 
-        src='{{cardData.avatar}}' 
-        mode='widthFix'>
-      </image>
-      <view class='verified-label' wx:if='{{!!cardData.verified}}'>
-        <image class='verified-img' 
-          src='./images/check_circle.png' 
-          mode='widthFix'>
-        </image>
-      </view>
-    </view>
-    <view class='info-wrap'>
-      <view class='info-title'>
-        {{cardData.name}}
-      </view>
-      <view class='info-desc'>
-        {{cardData.desc}}
+    <view class='label-container'>
+      <view class='label count-label'>
+        x{{cardData.urls.length}}
       </view>
     </view>
   </view>

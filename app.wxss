@@ -67,7 +67,7 @@ page {
 }
 
 .more-btn {
-  margin: 0 40rpx 60rpx 40rpx;
+  margin: 50rpx 40rpx 60rpx 40rpx;
   background: #fff;
   font-size: 24rpx;
   color: #4c5766;
