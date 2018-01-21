@@ -3,15 +3,24 @@
   <view class='post-category' wx:if='{{!!postData.category}}'>
     in {{postData.category}}
   </view>
-  <view class='post-marker'>
-    <view class='post-avatar' wx:if='{{postData.avatar != null && postData.avatar != ""}}'>
-      <image class='post-avatar-img' 
-        src='{{postData.avatar}}' 
-        mode='widthFix'>
-      </image>
+  <view class='post-marker-info'>
+    <view class='post-marker'>
+      <view class='post-avatar' wx:if='{{postData.avatar != null && postData.avatar != ""}}'>
+        <image class='post-avatar-img' 
+          src='{{postData.avatar}}' 
+          mode='widthFix'>
+        </image>
+      </view>
+      <view class='post-marker-name'>
+        {{postData.makerName}}
+      </view>
     </view>
-    <view class='post-marker-name'>
-      {{postData.makerName}}
+    <view class='exit' 
+      bindtap='redirectHome' 
+      wx:if='{{showExit}}'>
+      <image class='exit-img' 
+        src='./images/exit.svg' 
+        mode='widthFix'></image>
     </view>
   </view>
 </view>

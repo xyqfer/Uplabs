@@ -8,6 +8,7 @@ Page({
    */
   data: {
     isLoading: false,
+    showExit: false,
     postData: {}
   },
 
@@ -20,6 +21,9 @@ Page({
 
     if (from == 'share') {
       this.loadData(id);
+      this.setData({
+        showExit: true
+      });
     } else {
       const app = getApp();
 
@@ -111,5 +115,11 @@ Page({
         urls: urls
       });
     }
+  },
+
+  redirectHome: function() {
+    wx.switchTab({
+      url: '../index/index'
+    });
   }
 })
