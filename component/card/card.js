@@ -8,6 +8,10 @@ Component({
       type: Object,
       value: {}
     },
+    collectionData: {
+      type: Object,
+      value: {}
+    },
     loading: {
       type: Boolean,
       value: false
@@ -19,33 +23,39 @@ Component({
     imageUrl: {
       type: String,
       value: ''
+    },
+    cardType: {
+      type: String,
+      value: 'card'
     }
   },
 
   attached: function() {
-    const app = getApp();
-    const cardData = this.data.cardData;
+    if (this.data.cardType === 'card') {
+      const app = getApp();
+      const cardData = this.data.cardData;
 
-    let imageUrl = cardData.cover;
-    const postId = cardData.id;
+      let imageUrl = cardData.cover;
+      const postId = cardData.id;
 
-    if (app.globalData.supportWebp) {
-      imageUrl += '/format/webp';
-    }
+      if (app.globalData.supportWebp) {
+        imageUrl += '/format/webp';
+      }
 
-    if (cardData.avatar && cardData.avatar.indexOf('uplabscompress-1252013833.image.myqcloud.com') == -1) {
-      cardData.avatar = '';
-    }
+      if (cardData.avatar && cardData.avatar.indexOf('uplabscompress-1252013833.image.myqcloud.com') == -1) {
+        cardData.avatar = '';
+      }
 
-    this.setData({
-      cardData: cardData
-    });
-
-    if (postId != null && imageUrl != null) {
       this.setData({
-        postId: postId,
-        imageUrl: imageUrl
+        cardData: cardData
       });
+
+      if (postId != null && imageUrl != null) {
+        this.setData({
+          postId: postId,
+          imageUrl: imageUrl
+        });
+      }
     }
   },
 
@@ -67,6 +77,15 @@ Component({
       app.globalData.postData = this.data.cardData;
       wx.navigateTo({
         url: `../post/post?id=${id}`
+      });
+    },
+
+    openCollection: function(event) {
+      const name = event.currentTarget.dataset.collectionName;
+      const linkPath = event.currentTarget.dataset.collectionUrl;
+
+      wx.navigateTo({
+        url: `../postCollection/postCollection?name=${name}&linkPath=${linkPath}`
       });
     }
   }

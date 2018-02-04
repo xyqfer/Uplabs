@@ -30,7 +30,7 @@
     <image class='img' 
       bindtap='showPreview'
       data-index='{{index}}'
-      src='{{item}}' 
+      src='{{item.indexOf("?imageView2/q/") > -1 ? item : item + "?imageView2/q/75"}}' 
       mode='widthFix' 
       lazy-load='true'>
     </image>

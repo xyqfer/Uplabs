@@ -5,7 +5,9 @@
     "pages/ios/ios",
     "pages/android/android",
     "pages/animation/animation",
-    "pages/post/post"
+    "pages/post/post",
+    "pages/collection/collection",
+    "pages/postCollection/postCollection"
   ],
   "tabBar": {
     "selectedColor": "#000000",
@@ -15,7 +17,7 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "All",
+        "text": "Popular",
         "iconPath": "./pages/images/index_default.png",
         "selectedIconPath": "./pages/images/index_select.png"
       },
@@ -32,10 +34,10 @@
         "selectedIconPath": "./pages/images/android_select.png"
       },
       {
-        "pagePath": "pages/animation/animation",
-        "text": "Animation",
-        "iconPath": "./pages/images/animation_default.png",
-        "selectedIconPath": "./pages/images/animation_select.png"
+        "pagePath": "pages/collection/collection",
+        "text": "Collection",
+        "iconPath": "./pages/images/collection_default.png",
+        "selectedIconPath": "./pages/images/collection_select.png"
       }
     ]
   },

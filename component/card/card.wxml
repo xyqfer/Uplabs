@@ -1,5 +1,5 @@
 <view class='card' 
-  wx:if='{{!loading}}' 
+  wx:if='{{!loading && cardType === "card"}}' 
   bindtap='openPost' data-post-id='{{postId}}'>
   <view class='img-container' style='background-color: {{cardData.backgroundColor}};'>
     <image class='preivew-img' 
@@ -10,6 +10,41 @@
     <view class='label-container'>
       <view class='label count-label'>
         x{{cardData.urls.length}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='card collection-card' 
+  wx:if='{{!loading && cardType === "collection"}}'>
+  <view class='img-list' 
+    bindtap='openCollection' 
+    data-collection-name='{{collectionData.name}}'
+    data-collection-url='{{collectionData.linkPath}}'>
+
+    <block wx:for='{{collectionData.popularPost}}'>
+      <view class='img-item' style='background-color: {{item.backgroundColor}};'>
+        <image class='collection-img' 
+          src='{{item.previewImg}}' 
+          mode='widthFix' 
+          lazy-load='true'>
+        </image>
+      </view>
+    </block>
+  </view>
+  <view class='collection-info' bindtap=''>
+    <view class='collection-avatar' wx:if='{{collectionData.avatar != null && collectionData.avatar != ""}}'>
+      <image class='collection-avatar-img'
+        src='{{collectionData.avatar}}' 
+        mode='widthFix'>
+      </image>
+    </view>
+    <view class='collection-msg'>
+      <view class='collection-name'>
+        {{collectionData.name}}
+      </view>
+      <view class='collection-count'>
+        {{collectionData.postCount}} Posts
       </view>
     </view>
   </view>

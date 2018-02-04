@@ -1,0 +1,15 @@
+<view class='card-container'>
+  <view class='card-header'>
+      <view class='card-header-title card-header-title-{{dayIndex}}'>
+        Collection
+      </view>
+    </view>
+
+  <block wx:for='{{list}}' wx:key='id'>
+    <uplabs-card collection-data='{{item}}' card-type='collection'></uplabs-card>
+  </block>
+
+  <block wx:if='{{isLoading}}' wx:for='{{[1, 2, 3]}}' wx:key='{{index}}'>
+    <uplabs-card loading='{{true}}'></uplabs-card>
+  </block>
+</view>
