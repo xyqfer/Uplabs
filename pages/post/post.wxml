@@ -4,7 +4,7 @@
     in {{postData.category}}
   </view>
   <view class='post-marker-info'>
-    <view class='post-marker'>
+    <view class='post-marker' bindtap='openAuthor'>
       <view class='post-avatar' wx:if='{{postData.avatar != null && postData.avatar != ""}}'>
         <image class='post-avatar-img' 
           src='{{postData.avatar}}' 

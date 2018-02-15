@@ -7,7 +7,8 @@
     "pages/animation/animation",
     "pages/post/post",
     "pages/collection/collection",
-    "pages/postCollection/postCollection"
+    "pages/postCollection/postCollection",
+    "pages/author/author"
   ],
   "tabBar": {
     "selectedColor": "#000000",

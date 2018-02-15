@@ -121,5 +121,13 @@ Page({
     wx.switchTab({
       url: '../index/index'
     });
+  },
+
+  openAuthor: function() {
+    const { authorName, makerName } = this.data.postData;
+
+    wx.navigateTo({
+      url: `../author/author?name=${makerName}&author=${authorName}`
+    });
   }
 })

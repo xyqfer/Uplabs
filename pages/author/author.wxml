@@ -1,0 +1,9 @@
+<view class='card-container'>
+  <block wx:for='{{list}}' wx:key='id'>
+    <uplabs-card card-data='{{item}}'></uplabs-card>
+  </block>
+
+  <block wx:if='{{isLoading}}' wx:for='{{[1, 2, 3]}}' wx:key='{{index}}'>
+    <uplabs-card loading='{{true}}'></uplabs-card>
+  </block>
+</view>

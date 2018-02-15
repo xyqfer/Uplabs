@@ -32,7 +32,7 @@
       </view>
     </block>
   </view>
-  <view class='collection-info' bindtap=''>
+  <view class='collection-info'>
     <view class='collection-avatar' wx:if='{{collectionData.avatar != null && collectionData.avatar != ""}}'>
       <image class='collection-avatar-img'
         src='{{collectionData.avatar}}' 
