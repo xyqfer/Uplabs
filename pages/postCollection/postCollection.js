@@ -8,6 +8,7 @@ Page({
    */
   data: {
     isLoading: false,
+    isLoadingEnd: false,
     page: 1,
     linkPath: '',
     list: [],
@@ -34,7 +35,7 @@ Page({
   },
 
   loadData: function (id) {
-    if (!this.data.isLoading) {
+    if (!this.data.isLoading && !this.data.isLoadingEnd) {
       this.setData({
         isLoading: true
       });
@@ -46,7 +47,8 @@ Page({
           this.setData({
             list: this.data.list.concat(data),
             page: this.data.page + 1,
-            isLoading: false
+            isLoading: false,
+            isLoadingEnd: data.length === 0
           });
         }
       });
